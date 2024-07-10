@@ -12,6 +12,13 @@ if ($connect) {
     echo 'bad';
 }
 
-echo $method; 
-
-?>
+switch ($_GET['register']) {
+    case 'GET':
+        $data = json_decode(file_get_contents('php://input'));
+        echo $data['name'];
+        break;
+    
+    default:
+        # code...
+        break;
+}
