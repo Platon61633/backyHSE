@@ -12,8 +12,8 @@ if ($connect) {
     echo 'bad';
 }
 
-switch ($_GET['register']) {
-    case 'GET':
+switch ($_GET['need']) {
+    case 'register':
         $data = json_decode(file_get_contents('php://input'));
         echo $data['name'];
         break;
